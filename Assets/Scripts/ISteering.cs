@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-using System;
-
 public interface ISteering
 {
    

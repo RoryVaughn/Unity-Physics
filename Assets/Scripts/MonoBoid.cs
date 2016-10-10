@@ -15,10 +15,8 @@ public class MonoBoid : MonoBehaviour
 
     
     void Awake()
-    {
-       // max_speed = m_boid.MaxSpeed;
-        mass = Random.Range(100, 500);
-        //transform.localScale *= mass / 200;
+    {        
+        mass = Random.Range(100, 500); 
         b = new Boid(mass);
         
         transform.position = new Vector3(Random.Range(0.0f, 10.0f), Random.Range(0.0f, 10.0f), 0);
@@ -35,7 +33,8 @@ public class MonoBoid : MonoBehaviour
 
 
     void LateUpdate()
-    { b.Position = b.Position + b.Velocity;
+    {
+        b.Position = b.Position + b.Velocity;
         transform.position = b.Position;
     }
 }
